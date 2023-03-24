@@ -1,7 +1,9 @@
 package org.arvinw.example4_4;
 
 import org.arvinw.example4_3.Enemy;
-
+/**
+ * 具体产品
+ */
 public class Boss extends Enemy {
     public Boss(int x, int y) {
         super(x, y);

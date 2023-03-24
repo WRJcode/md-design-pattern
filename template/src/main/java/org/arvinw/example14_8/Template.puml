@@ -1,0 +1,23 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+interface Template{
+  {abstract} void step1()
+  {abstract} void step2()
+  {abstract} void step3()
+  {abstract} void step4()
+  # default work()
+}
+
+class ConcreteTemplate{
+     void step1()
+     void step2()
+     void step3()
+     void step4()
+}
+
+Template <|-- ConcreteTemplate
+Client ..|> Template
+@enduml

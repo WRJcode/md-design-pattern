@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+interface Builder {
+    public void buildBasement()
+    public void buildWall()
+    public void buildRoof()
+    public Building getBuilding()
+}
+
+class ApartmentBuilder{
+    private Building apartment
+    public ApartmentBuilder()
+    public void buildBasement()
+    public void buildWall()
+    public void buildRoof()
+    public Building getBuilding()
+}
+
+class HouseBuilder{
+    private Building apartment
+    public ApartmentBuilder()
+    public void buildBasement()
+    public void buildWall()
+    public void buildRoof()
+    public Building getBuilding()
+}
+
+class Director {
+    private Builder builder;
+    public Director(Builder builder)
+    public void setBuilder
+    public Building direct()
+}
+
+class Building {
+    private List<String> buildingComponents = new ArrayList<>();
+    public void setBasement(String basement)
+    public void setRoof(String roof)
+    public void setWall(String wall)
+    public String showBuilding()
+}
+
+Builder <|-- ApartmentBuilder
+Builder <|-- HouseBuilder
+
+Director ..* Builder
+
+ApartmentBuilder ..|> Building
+ApartmentBuilder *.. Building
+
+HouseBuilder ..|> Building
+HouseBuilder *.. Building
+
+Client  ..|> Director
+
+@enduml

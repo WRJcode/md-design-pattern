@@ -1,0 +1,24 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Client
+interface TriplePin {
+  + void electrify(int l,int n,int e)
+}
+
+class Adapter{
+    - DualPin dualPin
+    + Adapter(DualPin dualPin)
+    + void electrify(int l, int n, int e)
+}
+interface DualPin {
+  + void electrify(int l,int n)
+}
+class TV {
+    + void electrify(int l, int n)
+}
+
+Client ..|> TriplePin
+TV --|> DualPin
+TriplePin <|-- Adapter
+Adapter ..* DualPin
+@enduml

@@ -1,0 +1,118 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class client
+
+interface AbstractFactory {
+    LowClassUnit createLowClass();
+    MidClassUnit createMidClass();
+    HighClassUnit createHighClass();
+}
+
+class HumanFactory{
+    private int x;
+    private int y;
+
+    public HumanFactory(int x,int y)
+    LowClassUnit createLowClass();
+    MidClassUnit createMidClass();
+    HighClassUnit createHighClass();
+}
+
+class AlienFactory{
+    private int x;
+    private int y;
+
+    public AlienFactory(int x,int y)
+    LowClassUnit createLowClass();
+    MidClassUnit createMidClass();
+    HighClassUnit createHighClass();
+}
+
+abstract class Unit {
+    protected int attack;
+    protected int defence;
+    protected int health;
+    protected int x;
+    protected int y;
+
+    public Unit(int attack,int defence,int health,int x,int y)}
+    public abstract void show();
+    public abstract void attack();
+}
+
+abstract class HighClassUnit{
+    public HighClassUnit(int x, int y)
+}
+
+abstract class MidClassUnit{
+    public MidClassUnit(int x, int y)
+}
+
+abstract class LowClassUnit{
+    public LowClassUnit(int x, int y)
+}
+
+class Battleship{
+    public Battleship( int x, int y)
+    public void show()
+    public void attack()
+}
+
+class Mammoth{
+    public Mammoth( int x, int y)
+    public void show()
+    public void attack()
+}
+
+class Tank{
+    public Tank( int x, int y)
+    public void show()
+    public void attack()
+}
+
+class Poison{
+    public Battleship( int x, int y)
+    public void show()
+    public void attack()
+}
+
+class Marine{
+    public Marine( int x, int y)
+    public void show()
+    public void attack()
+}
+
+class Roach{
+    public Roach( int x, int y)
+    public void show()
+    public void attack()
+}
+
+AbstractFactory <|.. AlienFactory
+AbstractFactory <|.. HumanFactory
+
+Unit <|-- HighClassUnit
+Unit <|-- MidClassUnit
+Unit <|-- LowClassUnit
+
+HighClassUnit <|.. Mammoth
+HighClassUnit <|.. Battleship
+
+MidClassUnit <|.. Poison
+MidClassUnit <|.. Tank
+
+LowClassUnit <|.. Roach
+LowClassUnit <|.. Marine
+
+HumanFactory ..|> Battleship
+HumanFactory ..|> Tank
+HumanFactory ..|> Marine
+
+AlienFactory ..|> Mammoth
+AlienFactory ..|> Poison
+AlienFactory ..|> Roach
+
+client ..|> AbstractFactory
+client ..|> Unit
+@enduml

@@ -1,0 +1,46 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class client
+
+interface  AbstractFactory{
+ createProductA()
+ createProductB()
+}
+
+class ConcreteFactory1{
+  createProductA()
+  createProductB()
+}
+
+class ConcreteFactory2{
+  createProductA()
+   createProductB()
+}
+
+abstract AbstractProductA
+abstract AbstractProductB
+
+class ConcreteProductA1
+class ConcreteProductA2
+class ConcreteProductB1
+class ConcreteProductB2
+
+
+client ..|> AbstractFactory
+client ..|> AbstractProductA
+client ..|> AbstractProductB
+
+AbstractFactory <|.. ConcreteFactory1
+AbstractFactory <|.. ConcreteFactory2
+
+ConcreteProductA1 --|> AbstractProductA
+ConcreteProductA2 --|> AbstractProductA
+ConcreteProductB1 --|> AbstractProductB
+ConcreteProductB2 --|> AbstractProductB
+
+ConcreteFactory1 ..|> ConcreteProductA1
+ConcreteFactory1 ..|> ConcreteProductB1
+ConcreteFactory2 ..|> ConcreteProductA2
+ConcreteFactory2 ..|> ConcreteProductB2
+@enduml

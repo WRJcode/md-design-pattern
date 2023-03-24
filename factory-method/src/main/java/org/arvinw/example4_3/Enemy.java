@@ -1,5 +1,8 @@
 package org.arvinw.example4_3;
 
+/**
+ * 抽象产品
+ */
 public abstract class Enemy {
 
     protected int x;
@@ -9,6 +12,5 @@ public abstract class Enemy {
         this.x = x;
         this.y = y;
     }
-
     public abstract void show();
 }

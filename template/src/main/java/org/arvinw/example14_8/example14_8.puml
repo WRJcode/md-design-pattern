@@ -1,0 +1,28 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+abstract class PM {
+
+    + {abstract} String analyze()
+    + {abstract} String design(String project)
+    + {abstract} String develop(String project)
+    + {abstract} boolean test(String project)
+    + {abstract} void release(String project)
+    # {final} void kickoff()
+}
+
+ class HRProject{
+
+    - Random random
+    + String analyze()
+    + String design(String project)
+    + String develop(String project)
+    + boolean test(String project)
+    + void release(String code)
+}
+
+Client ..|> PM
+HRProject ..|> PM
+@enduml

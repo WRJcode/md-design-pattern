@@ -1,0 +1,59 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+
+class client
+
+interface Factory{
+   Enemy : create (int screenWidth)
+}
+
+abstract class Enemy{
+    protected int x
+    protected int y
+    public Enemy(int x,int y)
+    public abstract void show()
+}
+
+class TankFactory{
+   Enemy(Tank) : create (int screenWidth)
+ }
+
+class AirplaneFactory{
+    Enemy : create (int screenWidth)
+  }
+
+class BossFactory{
+    Enemy : create (int screenWidth)
+  }
+
+
+ class Tank{
+    public Tank(int x, int y)
+    public void show()
+}
+
+class Airplane{
+    public Airplane(int x, int y)
+    public void show()
+}
+
+class Boss{
+    public Boos(int x, int y)
+    public void show()
+}
+
+
+client ..|> Factory
+client ..|> Enemy
+Factory <|.. TankFactory
+Factory <|.. AirplaneFactory
+Factory <|.. BossFactory
+Enemy <|-- Tank
+Enemy <|-- Airplane
+Enemy <|-- Boss
+
+TankFactory ..|> Tank
+AirplaneFactory ..|> Airplane
+BossFactory ..|> Boss
+
+@enduml

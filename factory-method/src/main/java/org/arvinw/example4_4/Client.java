@@ -1,5 +1,8 @@
 package org.arvinw.example4_4;
 
+/**
+ * 使用工厂方法设计模式
+ */
 public class Client {
     public static void main(String[] args) {
         int screenWidth = 100;

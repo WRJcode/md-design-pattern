@@ -1,0 +1,39 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+interface AbstractBuilder{
+  public void build1();
+  public void build2();
+  public void build3();
+  public Building getBuilding();
+}
+class ConcreteBuilder{
+ Building building
+ public void build1();
+ public void build2();
+ public void build3();
+ public Building getBuilding();
+}
+
+class Building
+
+class Director{
+  AbstractBuilder builder
+  Director(AbstractBuilder builder)
+  setBuilder(AbstractBuilder builder)
+  public Building direct()
+}
+
+Director ..* AbstractBuilder
+
+AbstractBuilder <|.. ConcreteBuilder
+
+Building ..* ConcreteBuilder
+Building <|.. ConcreteBuilder
+
+Client ..|> Director
+
+
+@enduml

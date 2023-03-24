@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client
+
+abstract class Enemy{
+   protected int x
+   protected int y
+   Enemy(int x,int y)
+   void show()
+}
+
+class Airplane {
+    public Airplane(int x, int y)
+    public void show()
+}
+
+class Tank {
+    public Tank(int x, int y)
+    public void show()
+}
+
+class SimpleFactory {
+    private int screenWidth
+    private Random random
+    public SimpleFactory(int screenWidth)
+    public Enemy create(String type)
+}
+
+Airplane --|> Enemy
+Tank --|> Enemy
+
+Airplane <|.. SimpleFactory
+Tank <|.. SimpleFactory
+
+Client ..|> SimpleFactory
+
+@enduml
