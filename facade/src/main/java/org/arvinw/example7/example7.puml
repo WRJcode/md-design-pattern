@@ -1,0 +1,45 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Facade{
+      - VegVendor vegVendor;
+      - Chef chef;
+      - Waiter waiter;
+      - Cleaner cleaner;
+
+      + Facade()
+}
+
+class Chef{
+ + void cook()
+}
+
+class Cleaner{
+    +  clean():void
+    +  wash():void
+}
+
+class Helper{
+    + cook():void
+}
+
+class VegVendor{
+    + purchase():void
+}
+
+class Waiter{
+    + order():void
+    + serve():void
+}
+
+Facade --> Chef
+Facade --> Waiter
+Facade --> VegVendor
+Facade --> Helper
+Facade --> Cleaner
+
+class Client{}
+
+Client ..> Facade
+
+@enduml

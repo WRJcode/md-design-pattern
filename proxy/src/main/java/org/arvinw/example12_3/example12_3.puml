@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client{}
+interface Internet{
+  + void httpAccess(String url)
+}
+
+class Modem {
+  + Modem(String password)
+  + void httpAccess(String url)
+}
+
+class RouteProxy{
+   - Internet modem
+   - List<String> blackList
+
+   + RouterProxy()
+   + void httpAccess(String url)
+}
+
+Client ..> RouteProxy
+
+RouteProxy ..|> Internet
+Modem ..|> Internet
+
+RouteProxy --> Modem
+
+class RouteProxy
+note right
+   @Override
+       public void httpAccess(String url) {
+           for (String keyword:blackList){
+               if (url.contains(keyword)){
+                   System.out.println("禁止访问" + url);
+                   return;
+               }
+           }
+           modem.httpAccess(url);
+       }
+end note
+
+@enduml

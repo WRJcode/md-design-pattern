@@ -8,15 +8,22 @@ interface Target{
 }
 class Adapter{
   + Adapted obj
-  request()
+   request()
 }
 
 interface Adapted{
  + specificRequest()
 }
 
-Target <|.. Client
+class ConcreteAdapted{
+  + specificRequest()
+}
+
+Target <.. Client
 Target <|.. Adapter
-Adapter ..* Adapted
+
+ConcreteAdapted --|>Adapted
+Adapter ..o Adapted
+
 
 @enduml

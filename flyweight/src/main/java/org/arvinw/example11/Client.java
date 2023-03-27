@@ -20,6 +20,9 @@ public class Client {
         factory.getDrawable("房屋").draw(10,10);
         factory.getDrawable("房屋").draw(10,50);
 
+        factory.getDrawable("水牛").draw(10,50);
+        factory.getDrawable("水牛").draw(20,10);
+
 
     }
 }

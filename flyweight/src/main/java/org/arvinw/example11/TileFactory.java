@@ -25,6 +25,8 @@ public class TileFactory {
                     break;
                 case "房屋":
                     images.put(image,new House());
+                default:
+                    images.put(image, new Tile(image));
             }
         }
         return images.get(image);

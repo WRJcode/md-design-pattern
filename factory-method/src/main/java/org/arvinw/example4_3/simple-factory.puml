@@ -1,6 +1,7 @@
 @startuml
 'https://plantuml.com/class-diagram
 
+class Client
 abstract class AbstractProduct
 class ConcreteProductA
 class ConcreteProductB
@@ -9,7 +10,7 @@ class SimpleFactory
 AbstractProduct <|-- ConcreteProductA
 AbstractProduct <|-- ConcreteProductB
 
-SimpleFactory ..|> ConcreteProductA
-SimpleFactory ..|> ConcreteProductB
-
+SimpleFactory ..> ConcreteProductA
+SimpleFactory ..> ConcreteProductB
+Client ..> SimpleFactory
 @enduml

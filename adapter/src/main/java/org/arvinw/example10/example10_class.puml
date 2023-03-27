@@ -20,8 +20,8 @@ class TVAdapter{
     + void electrify(int l, int n, int e)
 }
 
-Client ..|> TriplePin
-TV --|> DualPin
-TVAdapter ..|> TV
-TVAdapter --|> TriplePin
+Client ..> TriplePin
+TV ..|> DualPin
+TVAdapter --|> TV
+TVAdapter ...|> TriplePin
 @enduml

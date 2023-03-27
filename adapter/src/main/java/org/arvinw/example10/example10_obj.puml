@@ -17,8 +17,8 @@ class TV {
     + void electrify(int l, int n)
 }
 
-Client ..|> TriplePin
-TV --|> DualPin
-TriplePin <|-- Adapter
-Adapter ..* DualPin
+Client ..> TriplePin
+TV ..|> DualPin
+TriplePin <|.. Adapter
+Adapter ..o DualPin
 @enduml

@@ -1,7 +1,7 @@
 package org.arvinw.reflect_example;
 
 public interface People {
-   public void work();
+    void work();
 
-   public void eat();
+    void eat();
 }

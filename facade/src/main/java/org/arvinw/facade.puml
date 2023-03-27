@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Facade{
+ + wrapOperation():void
+}
+
+class SystemA{
+ + operationA():void
+}
+
+class SystemB{
+ + operationB():void
+}
+
+class SystemC{
+ + operationC():void
+}
+
+class Client{}
+
+Client ..> Facade
+
+Facade --> SystemA
+Facade --> SystemB
+Facade --> SystemC
+@enduml

@@ -15,16 +15,13 @@ public class Client {
 
         Switcher switcher = new Switcher();
         Bulb bulb = new Bulb();
-        Command switchCommand = new SwitchCommand(bulb);
 
-        switcher.setCommand(switchCommand);
 
+        switcher.setCommand(new SwitchCommand(bulb));
         switcher.buttonPush();
         switcher.buttonPop();
 
-
         switcher.setCommand(new FlashCommand(bulb));
-
         switcher.buttonPush();
         Thread.sleep(3000);
         switcher.buttonPop();

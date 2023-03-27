@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+class Client{}
+
+interface People{
+  + void work();
+  + void eat();
+}
+
+class Saler implements People{
+  + void work();
+  + void eat();
+}
+
+class SalerInvocationHandler implements InvocationHandler {
+    - People people;
+    + SalerInvocationHandler(People people)
+    + Object invoke(Object proxy, Method method, Object[] args)
+}
+
+SalerInvocationHandler --> Saler
+
+class Proxy implements People{
+}
+
+class Proxy
+note top
+  /**Client运行时，在内存生成的代理对象*/
+end note
+
+class Client
+note top
+  People people = new Saler();
+  SalerInvocationHandler salerInvocationHandler = new SalerInvocationHandler(people);
+  People proxyClass = (People) Proxy.newProxyInstance(ClassLoader.getSystemClassLoader(),
+  new Class[]{People.class},salerInvocationHandler);
+end note
+
+Client ..> Proxy
+Client ..> SalerInvocationHandler
+Proxy --> Saler
+
+@enduml

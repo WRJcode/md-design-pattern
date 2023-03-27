@@ -14,9 +14,9 @@ class ConcreteAdapted{
   request()
 }
 
-Adapter --|> Target
-ConcreteAdapted --|> Adapted
-Adapter ..|> ConcreteAdapted
-Client  ..|> Target
+Adapter ..|> Target
+ConcreteAdapted ..|> Adapted
+Adapter --|> ConcreteAdapted
+Client  ..> Target
 
 @enduml

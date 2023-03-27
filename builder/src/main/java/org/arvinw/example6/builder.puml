@@ -29,11 +29,9 @@ class Director{
 Director ..* AbstractBuilder
 
 AbstractBuilder <|.. ConcreteBuilder
-
-Building ..* ConcreteBuilder
-Building <|.. ConcreteBuilder
-
-Client ..|> Director
+Building ..o ConcreteBuilder
+Building <.. ConcreteBuilder
+Client ..> Director
 
 
 @enduml

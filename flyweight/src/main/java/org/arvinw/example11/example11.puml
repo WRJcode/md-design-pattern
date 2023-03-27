@@ -1,0 +1,43 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Drawable{
+  +  draw(int x,int y):void
+}
+
+class Grass implements Drawable{
+  - String image
+  + Grass()
+  + draw(int x, int y):void
+}
+
+class House implements Drawable{
+  - String image
+  + House()
+  + draw(int x, int y):void
+}
+
+class River implements Drawable{
+  - String image
+  + River()
+  + draw(int x, int y):void
+}
+class Road implements Drawable{
+  - String image
+  + Road()
+  + draw(int x, int y):void
+}
+class Tile implements Drawable{
+  - String image
+  + Tile()
+  + draw(int x, int y):void
+}
+
+class TileFactory{
+ - Map<String,Drawable> images
+ + TileFactory()
+}
+
+TileFactory o-- Drawable
+
+@enduml

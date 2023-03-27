@@ -1,0 +1,48 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Command{
+ + exe():void
+ + unexe():void
+}
+
+class Bulb{
+    + on():void
+    + off():void
+}
+
+class FlashCommand implements Command{
+    - Bulb bulb;
+    - volatile boolean neonRun = false;
+    + FlashCommand(Bulb bulb)
+    + void exe()
+    + void unexe()
+}
+
+class SwitchCommand implements Command{
+    - Bulb bulb;
+    + SwitchCommand(Bulb bulb)
+    + void exe()
+    + void unexe()
+}
+
+class Switcher{
+    - Command command;
+    + void setCommand(Command command)
+    + void buttonPush()
+    + void buttonPop()
+}
+
+Switcher o-- Command
+
+FlashCommand o-- Bulb
+SwitchCommand o-- Bulb
+
+class Client{}
+
+Client ..> Bulb
+Client ..> Switcher
+Client ..> FlashCommand
+Client ..> SwitchCommand
+
+@enduml

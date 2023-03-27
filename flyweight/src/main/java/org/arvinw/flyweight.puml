@@ -1,0 +1,26 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface  Flyweight{
+ + operation():void
+}
+
+class ConcreteFlyWeight implements Flyweight{
+ - IntrinsicState:int
+ + operation():void
+}
+
+class UnsharedConcreteFlyweight implements Flyweight{
+ - allState:int
+ + operation():void
+}
+
+class FlyweightFactory{
+ - mpFlyweight:map<String,Flyweight>
+ + getFlyweight(String):void
+}
+
+FlyweightFactory o-- Flyweight
+
+
+@enduml

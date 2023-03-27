@@ -1,0 +1,30 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface  Showable{
+ + show():void
+}
+
+class Girl implements Showable{
+  + show():void
+}
+
+abstract class Decorator1 implements Showable{
+   # Showable showable
+   + Decorator1(Showable showable)
+   + show():void
+}
+
+class FoundationMakeup extends Decorator1{
+  + FoundationMakeup(Showable showable)
+  + show():void
+}
+
+class Lipstick extends Decorator1{
+  + Lipstick(Showable showable)
+  + show():void
+}
+
+Decorator1 o-- Showable
+
+@enduml

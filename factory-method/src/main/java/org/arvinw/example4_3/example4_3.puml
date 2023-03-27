@@ -30,9 +30,9 @@ class SimpleFactory {
 Airplane --|> Enemy
 Tank --|> Enemy
 
-Airplane <|.. SimpleFactory
-Tank <|.. SimpleFactory
+Airplane <.. SimpleFactory
+Tank <.. SimpleFactory
 
-Client ..|> SimpleFactory
+Client ..> SimpleFactory
 
 @enduml

@@ -6,7 +6,6 @@ public class FlashCommand implements Command{
 
     private Bulb bulb;
     private volatile  boolean neonRun = false;
-
     public FlashCommand(Bulb bulb){
         this.bulb = bulb;
     }

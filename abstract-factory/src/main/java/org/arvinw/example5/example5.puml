@@ -96,23 +96,23 @@ Unit <|-- HighClassUnit
 Unit <|-- MidClassUnit
 Unit <|-- LowClassUnit
 
-HighClassUnit <|.. Mammoth
-HighClassUnit <|.. Battleship
+HighClassUnit <|-- Mammoth
+HighClassUnit <|-- Battleship
 
-MidClassUnit <|.. Poison
-MidClassUnit <|.. Tank
+MidClassUnit <|-- Poison
+MidClassUnit <|-- Tank
 
-LowClassUnit <|.. Roach
-LowClassUnit <|.. Marine
+LowClassUnit <|-- Roach
+LowClassUnit <|-- Marine
 
-HumanFactory ..|> Battleship
-HumanFactory ..|> Tank
-HumanFactory ..|> Marine
+HumanFactory ..> HighClassUnit
+HumanFactory ..> MidClassUnit
+HumanFactory ..> LowClassUnit
 
-AlienFactory ..|> Mammoth
-AlienFactory ..|> Poison
-AlienFactory ..|> Roach
+AlienFactory ..> HighClassUnit
+AlienFactory ..> MidClassUnit
+AlienFactory ..> LowClassUnit
 
-client ..|> AbstractFactory
-client ..|> Unit
+client ..> AbstractFactory
+client ..> Unit
 @enduml

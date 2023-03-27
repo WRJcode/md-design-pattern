@@ -1,0 +1,32 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Component{
+ + operation():void
+}
+
+class ConcreteComponent implements Component{
+ + operation():void
+}
+
+Abstract class Decorator implements Component{
+    + operation():void
+}
+
+class ConcreteDecoratorA extends Decorator{
+   + addBehavior():void
+   + operation():void
+}
+
+class ConcreteDecoratorB extends Decorator{
+   + addBehavior():void
+   + operation():void
+}
+
+class ConcreteDecorator... extends Decorator{
+   + addBehavior():void
+   + operation():void
+}
+
+Decorator o-- Component
+@enduml

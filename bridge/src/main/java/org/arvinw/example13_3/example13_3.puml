@@ -1,0 +1,51 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Pen{
+     protected Ruler ruler;
+     + Pen(Ruler ruler)
+     + {abstract}  void draw();
+}
+
+class BlackPen extends Pen{
+    + BlackPen(Ruler ruler)
+    + void draw()
+}
+
+class WhitePen extends Pen{
+   + WhitePen(Ruler ruler)
+   + void draw()
+}
+
+class RedPen extends Pen{
+   + RedPen(Ruler ruler)
+   + void draw()
+}
+
+interface Ruler{
+    + void regularize();
+}
+
+class SquareRuler implements Ruler{
+   + void regularize();
+}
+
+class CircleRuler implements Ruler{
+   + void regularize();
+}
+
+class TriangleRuler implements Ruler{
+   + void regularize();
+}
+
+class OtherRuler implements Ruler{
+   + void regularize();
+}
+
+Pen *--> Ruler
+class Client{}
+Client ..> Pen
+
+
+
+@enduml

@@ -19,5 +19,8 @@ public class Client {
         new BlackPen(new TriangleRuler()).draw();
         new BlackPen(new CircleRuler()).draw();
         new BlackPen(new OtherRuler()).draw();
+
+         new RedPen(new SquareRuler()).draw();
+         new RedPen(new CircleRuler()).draw();
     }
 }

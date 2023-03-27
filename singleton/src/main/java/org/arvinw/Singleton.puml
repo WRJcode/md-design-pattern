@@ -4,9 +4,10 @@
 class Singleton{
   - static Singleton singleton
   - singleton()
-  + {static} HungerSun getInstance()
+  + {static} Singleton getInstance()
 }
 
-Singleton ..o Singleton
+Singleton <--o Singleton
+
 
 @enduml

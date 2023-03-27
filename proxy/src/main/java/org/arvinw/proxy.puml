@@ -1,0 +1,38 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client{}
+
+interface Subject{
+  + request()
+}
+
+class Proxy{
+  +afterRequest()
+  +preRequest()
+  +request()
+}
+
+class RealSubject{
+  + request()
+}
+
+class Proxy
+note left
+     preRequest();
+     realSubject -> request();
+     afterRequest();
+end note
+
+
+
+RealSubject <-- Proxy
+Subject <|.. RealSubject
+
+Client ..> Proxy
+Subject <|.. Proxy
+
+
+
+
+@enduml

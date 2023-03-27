@@ -43,8 +43,8 @@ class Boss{
 }
 
 
-client ..|> Factory
-client ..|> Enemy
+client ..> Factory
+client ..> Enemy
 Factory <|.. TankFactory
 Factory <|.. AirplaneFactory
 Factory <|.. BossFactory
@@ -52,8 +52,8 @@ Enemy <|-- Tank
 Enemy <|-- Airplane
 Enemy <|-- Boss
 
-TankFactory ..|> Tank
-AirplaneFactory ..|> Airplane
-BossFactory ..|> Boss
+TankFactory ..> Tank
+AirplaneFactory ..> Airplane
+BossFactory ..> Boss
 
 @enduml

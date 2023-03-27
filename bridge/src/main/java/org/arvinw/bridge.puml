@@ -1,0 +1,35 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class Client {}
+
+Client ..> Abstraction
+
+abstract class Abstraction{
+ - Implementor impl
+ + Abstraction(Implementor impl)
+ + void operation()
+}
+
+class RefinedAbstraction extends Abstraction{
+   + Abstraction(Implementor impl)
+   + void operation()
+}
+
+interface Implementor{
+ + void operationImpl()
+}
+
+class ConcreteImplementorA implements Implementor{
+  + void operationImpl()
+}
+
+class ConcreteImplementorB implements Implementor{
+  + void operationImpl()
+}
+
+Abstraction o--> Implementor
+
+
+
+@enduml
