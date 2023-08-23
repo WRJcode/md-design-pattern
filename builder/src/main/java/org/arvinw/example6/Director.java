@@ -1,5 +1,8 @@
 package org.arvinw.example6;
 
+/**
+ * 导演
+ */
 public class Director {
 
     private Builder builder;

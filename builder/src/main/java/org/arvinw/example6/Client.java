@@ -1,5 +1,8 @@
 package org.arvinw.example6;
 
+/**
+ * 调用方
+ */
 public class Client {
 
     /**

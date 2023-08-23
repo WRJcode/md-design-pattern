@@ -1,5 +1,8 @@
 package org.arvinw.example6;
 
+/**
+ * 具体构造者
+ */
 public class ApartmentBuilder implements Builder{
 
     private Building apartment;

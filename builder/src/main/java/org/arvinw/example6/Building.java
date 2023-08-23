@@ -3,6 +3,9 @@ package org.arvinw.example6;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * 产品
+ */
 public class Building {
 
     private List<String> buildingComponents = new ArrayList<>();
