@@ -1,5 +1,8 @@
 package org.arvinw;
 
+/**
+ * 线程安全同步方法懒汉式单例模式
+ */
 public class LazySun_synchronized_method {
 
     private static LazySun_synchronized_method sun;
