@@ -1,5 +1,11 @@
 package org.arvinw.example14;
 
+/**
+ * 
+ * @author wrjco
+ * 改造前对象
+ *
+ */
 public class Whale {
 
     public void move(){

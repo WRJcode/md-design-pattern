@@ -1,5 +1,11 @@
 package org.arvinw.example14;
 
+/**
+ * 
+ * @author wrjco
+ * 客户端
+ *
+ */
 public class Client {
 
     public static void main(String[] args) {

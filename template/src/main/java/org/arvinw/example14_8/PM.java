@@ -1,5 +1,8 @@
 package org.arvinw.example14_8;
 
+/*
+ * 模板
+ */
 public abstract class PM {
 
     public abstract String analyze();

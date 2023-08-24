@@ -1,5 +1,11 @@
 package org.arvinw.example14;
 
+/**
+ * 
+ * @author wrjco
+ * 改造前具体实现
+ *
+ */
 public class Human {
 
     public void move(){

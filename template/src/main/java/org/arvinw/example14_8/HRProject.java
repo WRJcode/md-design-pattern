@@ -2,6 +2,12 @@ package org.arvinw.example14_8;
 
 import java.util.Random;
 
+/**
+ * 
+ * @author wrjco
+ * 模板具体实现
+ *
+ */
 public class HRProject extends PM{
 
     private Random random = new Random();

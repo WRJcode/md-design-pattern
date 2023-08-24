@@ -1,5 +1,11 @@
 package org.arvinw.example14;
 
+/**
+ * 
+ * @author wrjco
+ * 模板具体实现
+ *
+ */
 public class Whale1 extends Mammal{
     @Override
     public void move() {

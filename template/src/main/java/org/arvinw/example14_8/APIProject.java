@@ -1,5 +1,11 @@
 package org.arvinw.example14_8;
 
+/**
+ * 
+ * @author wrjco
+ * 模板具体实现
+ *
+ */
 public class APIProject extends PM{
     @Override
     public String analyze() {
