@@ -1,5 +1,11 @@
 package org.arvinw.example5;
 
+/**
+ * 
+ * @author wrjco
+ * 具体产品
+ *
+ */
 public class HumanFactory implements AbstractFactory{
 
     private int x;

@@ -1,5 +1,11 @@
 package org.arvinw.example5;
 
+/**
+ * 
+ * @author wrjco
+ * 顶层抽象产品
+ *
+ */
 public abstract class Unit {
 
     protected int attack;
