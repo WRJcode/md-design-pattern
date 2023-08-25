@@ -1,7 +1,7 @@
 package org.arvinw.example4_3;
 
 /**
- * 抽象产品
+ *  抽象产品
  */
 public abstract class Enemy {
 

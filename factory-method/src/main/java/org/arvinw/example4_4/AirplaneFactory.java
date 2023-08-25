@@ -5,6 +5,12 @@ import org.arvinw.example4_3.Enemy;
 
 import java.util.Random;
 
+/**
+ * 
+ * @author wrjco
+ * 具体工厂A
+ *
+ */
 public class AirplaneFactory implements Factory{
 
     @Override

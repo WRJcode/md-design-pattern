@@ -1,5 +1,11 @@
 package org.arvinw.example4_3;
 
+/**
+ * 
+ * @author wrjco
+ * 工厂方法模式客户端
+ *
+ */
 public class Client {
     /**
      *

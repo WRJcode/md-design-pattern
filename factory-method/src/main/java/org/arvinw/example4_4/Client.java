@@ -1,7 +1,7 @@
 package org.arvinw.example4_4;
 
 /**
- * 使用工厂方法设计模式
+ * 使用工厂方法设计模式客户端
  */
 public class Client {
     public static void main(String[] args) {

@@ -5,6 +5,12 @@ import org.arvinw.example4_3.Tank;
 
 import java.util.Random;
 
+/**
+ * 
+ * @author wrjco
+ * 具体工厂A
+ *
+ */
 public class TankFactory implements Factory{
 
     @Override

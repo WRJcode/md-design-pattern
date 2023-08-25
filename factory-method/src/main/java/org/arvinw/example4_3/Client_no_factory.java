@@ -2,6 +2,12 @@ package org.arvinw.example4_3;
 
 import java.util.Random;
 
+/**
+ * 
+ * @author wrjco
+ * 非方法工厂模式客户端
+ *
+ */
 public class Client_no_factory {
 
     public static void main(String[] args) {

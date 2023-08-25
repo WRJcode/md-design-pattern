@@ -1,5 +1,11 @@
 package org.arvinw.example4_3;
 
+/**
+ * 
+ * @author wrjco
+ * 具体产品B
+ *
+ */
 public class Tank extends Enemy{
     public Tank(int x, int y) {
         super(x, y);

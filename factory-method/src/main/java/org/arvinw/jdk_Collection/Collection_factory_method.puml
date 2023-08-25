@@ -1,7 +1,29 @@
 @startuml
 'https://plantuml.com/class-diagram
 
-interface Collection{}
+interface Collection<E>{}
+class ArrayList<E> implements Collection{}
+class LinkedList<E> implements Collection{}
+class HashSet<E> implements Collection{}
+class TreeSet<E> implements Collection{}
 
+interface Iterator<E> {}
 
+class ArrayList.Itr implements Iterator
+class LinkedList.Itr implements Iterator
+class HashSet.Itr implements Iterator
+class TreeSet.Itr implements Iterator
+
+ArrayList ..> ArrayList.Itr
+LinkedList ..> LinkedList.Itr
+HashSet ..> HashSet.Itr
+TreeSet ..> TreeSet.Itr
+
+class l
+note top
+  抹去了细节，只展示能表达工厂方法模式的部分内容。Collection相当于
+  抽象工厂，其他集合实现类相当于具体工厂，Iterator接口相当于抽象
+  产品，各集合实现类的内部类Itr实现了Iterator，相当于具体产品，
+  每个集合实现类依赖各自的”具体产品“。
+end note
 @enduml

@@ -1,5 +1,11 @@
 package org.arvinw.example4_3;
 
+/**
+ * 
+ * @author wrjco
+ * 具体产品
+ *
+ */
 public class Airplane extends Enemy{
 
     public Airplane(int x, int y) {

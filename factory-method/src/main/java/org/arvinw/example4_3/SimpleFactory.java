@@ -1,7 +1,12 @@
 package org.arvinw.example4_3;
 
 import java.util.Random;
-
+/**
+ * 
+ * @author wrjco
+ * 工厂类
+ *
+ */
 public class SimpleFactory {
 
     private int screenWidth;
