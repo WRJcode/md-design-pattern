@@ -1,5 +1,10 @@
 package org.arvinw.example10;
 
+/**
+ * 客户端
+ * @author wrjco
+ *
+ */
 public class Client {
 
     /**

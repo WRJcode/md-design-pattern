@@ -1,5 +1,10 @@
 package org.arvinw.example10;
 
+/**
+ * 对象适配器
+ * @author wrjco
+ *
+ */
 public class Adapter implements TriplePin{
 
     private DualPin dualPin;

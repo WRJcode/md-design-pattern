@@ -1,5 +1,10 @@
 package org.arvinw.example10;
 
+/**
+ * 电器
+ * @author wrjco
+ *
+ */
 public class Computer implements DualPin{
 
     @Override

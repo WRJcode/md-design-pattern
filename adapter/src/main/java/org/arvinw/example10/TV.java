@@ -1,5 +1,10 @@
 package org.arvinw.example10;
 
+/**
+ * 电视
+ * @author wrjco
+ *
+ */
 public class TV implements DualPin{
 
     @Override
